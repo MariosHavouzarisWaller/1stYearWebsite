@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AwesomeBags Inc. Ordering Page</title>
+        <link rel="stylesheet" type="text/css" href="awesomebagsinc.css">
+    </head>
+    <body>
+        <div class="removeSpace">
+        </div>
+        <div class="myNavbar">
+            <div class="imgContainer">
+                <img src="https://thenypost.files.wordpress.com/2015/10/shutterstock_171874811.jpg?quality=90&strip=all" alt="Man carrying a plastic bag" id="topImage">
+            </div>
+            <ul id="topMenu">
+                <li><a href="index_mgh00004.html" target="_self" class="homeButton">Home</a></li>
+                <li><a href="orderpage.html" target="_self" class="otherButtons">Order</a></li>
+                <li><a href="" class="otherButtons">Contact</a></li>
+                <li><a href="" class="otherButtons">Login</a></li>
+            </ul>
+        </div>
+        <div class = "section1">
+            <div class="leftHalf">
+                <canvas id="myCanvas" style="border:2px solid black"></canvas>
+                <script>
+                    var myBagColor;
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(20,20,45,canvas.height - 30);
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(canvas.width - 70,20,45,canvas.height - 30);
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(20,80, canvas.width - 45,60);
+                </script>
+            </div>
+            <div class="rightHalfTop1">
+                <h2>Plastic Bag Logo</h2>
+                <div>
+                    <button class="buttonLogo colorButton" onclick="getLogo()">Click Here for new Logo</button>
+                    <script>
+                        var Logo;
+                        var logoColour;
+                        function getLogo() {
+                            Logo = prompt("Please enter a logo","");
+                            ctx.font = "20px Calibri";
+                            ctx.fillStyle = "black";
+                            ctx.fillText(Logo, 115,115);
+                        }
+
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonBlack colorButton" onclick="blackLogo()">Black</button>
+                    <script>
+                        function blackLogo() {
+                            ctx.fillStyle = "black";
+                            ctx.fillText(Logo, 115,115);
+                            logoColour = "Black";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonWhite colorButton" onclick="whiteLogo()">White</button>
+                    <script>
+                        function whiteLogo() {
+                            ctx.fillStyle = "white";
+                            ctx.fillText(Logo, 115,115);
+                            logoColour = "White";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonRed colorButton" onclick="redLogo()">Red</button>
+                    <script>
+                        function redLogo() {
+                            ctx.fillStyle = "red";
+                            ctx.fillText(Logo, 115,115);
+                            logoColour = "Red";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonBlue colorButton" onclick="blueLogo()">Blue</button>
+                    <script>
+                        function blueLogo() {
+                            ctx.fillStyle = "blue";
+                            ctx.fillText(Logo, 115,115);
+                            logoColour = "Blue";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonLogo colorButton" onclick="clearLogo()">Reset</button>
+                    <script>
+                        function clearLogo() {
+                            ctx.clearRect(20,20,45,canvas.height - 30);
+                            ctx.clearRect(canvas.width - 70,20,45,canvas.height - 30);
+                            ctx.clearRect(20,80, canvas.width - 45,60);
+                            ctx.fillStyle = "white";
+                            ctx.fillRect(20,20,45,canvas.height - 30);
+                            ctx.fillStyle = "white";
+                            ctx.fillRect(canvas.width - 70,20,45,canvas.height - 30);
+                            ctx.fillStyle = "white";
+                            ctx.fillRect(20,80, canvas.width - 45,60);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="rightHalfTop2">
+                <h2>Plastic Bag Colour</h2>
+                <div>
+                    <button class="buttonRed colorButton" onclick="redBag()">Red</button>
+                    <script>
+
+                        function redBag() {
+                            ctx.fillStyle = "red";
+                            ctx.fillRect(20,20,45,canvas.height - 30);
+                            ctx.fillStyle = "red";
+                            ctx.fillRect(canvas.width - 70,20,45,canvas.height - 30);
+                            ctx.fillStyle = "red";
+                            ctx.fillRect(20,80, canvas.width - 45,60);
+                            myBagColor = "Red";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonBlue colorButton" onclick="blueBag()">Blue</button>
+                    <script>
+                        function blueBag() {
+                            ctx.fillStyle = "blue";
+                            ctx.fillRect(20,20,45,canvas.height - 30);
+                            ctx.fillStyle = "blue";
+                            ctx.fillRect(canvas.width - 70,20,45,canvas.height - 30);
+                            ctx.fillStyle = "blue";
+                            ctx.fillRect(20,80, canvas.width - 45,60);
+                            myBagColor = "Blue";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonGreen colorButton" onclick="greenBag()">Green</button>
+                    <script>
+                        function greenBag() {
+                            ctx.fillStyle = "green";
+                            ctx.fillRect(20,20,45,canvas.height - 30);
+                            ctx.fillStyle = "green";
+                            ctx.fillRect(canvas.width - 70,20,45,canvas.height - 30);
+                            ctx.fillStyle = "green";
+                            ctx.fillRect(20,80, canvas.width - 45,60);
+                            myBagColor = "Green";
+                        }
+                    </script>
+                </div>
+                <div>
+                    <button class="buttonPurple colorButton" onclick="purpleBag()">Purple</button>
+                    <script>
+                        function purpleBag() {
+                            ctx.fillStyle = "purple";
+                            ctx.fillRect(20,20,45,canvas.height - 30);
+                            ctx.fillStyle = "purple";
+                            ctx.fillRect(canvas.width - 70,20,45,canvas.height - 30);
+                            ctx.fillStyle = "purple";
+                            ctx.fillRect(20,80, canvas.width - 45,60);
+                            myBagColor = "Purple";
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="rightHalfBottom">
+                <h2>Ordering section</h2>
+                <div>
+                    <p class="order">
+                        How many bags would you like to order? (Each bag is £0.03 and minimum order is 100 bags):
+                        <input type="number" id="bagNumber" min="100" value="100">
+                    </p>
+                </div>
+                <div>    
+                    <p class="order">
+                        <button onclick="calculateCost()">Calculate Cost</button>
+                        Total Cost is: £
+                        <input type="number" id="totalCost" value="calculateCost()">
+                        <script>
+                            var bagNumber;
+                            var totalBagCost;
+                            var individualBagCost = 0.03;
+                            function calculateCost() {
+                                bagNumber = document.getElementById("bagNumber").value;                      
+                                totalBagCost = (individualBagCost * bagNumber).toFixed(2);
+                                document.getElementById("totalCost").value = totalBagCost;
+                            }
+                        </script>
+                    </p>
+                </div>
+                <div class="clearFloat"></div>
+                <div>
+                    <p class="order">
+                        <button onclick="checkOrder()">Order Bags</button>
+                    </p>
+                    <script>
+                        function checkOrder() {
+                            bagNumber = document.getElementById("bagNumber").value;
+                            totalBagCost = (individualBagCost * bagNumber).toFixed(2);
+                            if (bagNumber >= 100)
+                            {
+                                alert("You have ordered " + bagNumber + " bags at the total cost of £" + totalBagCost + ". \n Bag Color: " + myBagColor + "\n Bag Logo: " + Logo + " \n Logo Color: "+logoColour+" \n Thank you for shopping with AwesomeBags Inc.! Your order will be arriving in 1 business day.");
+                            }
+                            else
+                            {
+                                alert("Please enter a valid number of bags you're willing to purchase.")
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
